@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports that Matter – Making important public reports usable on the web</title>
+    <meta name="description" content="Important public reports exist, but are effectively unusable online. Reports that Matter fixes that by making reports discoverable, readable, and linkable.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'neutral-850': '#1f2937',
+                    },
+                    typography: {
+                        DEFAULT: {
+                            css: {
+                                maxWidth: 'none',
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+    
+    <!-- Hero Section: Problem Statement -->
+    <section class="max-w-4xl mx-auto px-6 py-16 md:py-24">
+        <h1 class="text-4xl md:text-5xl font-light text-gray-900 leading-tight mb-8">
+            Important public reports exist.
+        </h1>
+        <h2 class="text-4xl md:text-5xl font-light text-gray-900 leading-tight mb-12">
+            They are just hard to find, hard to use, and hard to link to.
+        </h2>
+        
+        <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-6">
+            <p>
+                Governments publish vast amounts of high-quality information on matters of real public importance: official inquiries, investigations, and reports produced with serious resources, expert authorship, and often subpoena powers.
+            </p>
+            
+            <p>
+                Yet much of this material is effectively hidden.
+            </p>
+            
+            <p>
+                It is scattered across obscure or broken websites, locked inside huge PDF files, poorly indexed by search engines, and almost impossible to link to at the level that actually matters — the specific finding, paragraph, or piece of evidence.
+            </p>
+            
+            <p>
+                Even when journalists or commentators refer to these reports, readers are rarely taken to the report itself, let alone the relevant section. The result is that some of the most careful public research ever produced is underused in public debate.
+            </p>
+        </div>
+    </section>
+    
+    <hr class="max-w-4xl mx-auto border-gray-200">
+    
+    <!-- Section 2: What Reports that Matter Does -->
+    <section class="max-w-4xl mx-auto px-6 py-16 md:py-24">
+        <h2 class="text-3xl md:text-4xl font-light text-gray-900 mb-8">
+            Reports that Matter exists to fix this.
+        </h2>
+        
+        <p class="text-xl text-gray-700 mb-8 leading-relaxed">
+            Reports that Matter makes important public-interest reports usable on the web.
+        </p>
+        
+        <p class="text-lg text-gray-700 mb-6">
+            We collect, structure, and present serious reports so that they are:
+        </p>
+        
+        <ul class="space-y-3 text-lg text-gray-700 mb-8">
+            <li class="flex items-start">
+                <span class="mr-3 text-gray-400">•</span>
+                <span>discoverable via search,</span>
+            </li>
+            <li class="flex items-start">
+                <span class="mr-3 text-gray-400">•</span>
+                <span>readable online (not just downloadable PDFs),</span>
+            </li>
+            <li class="flex items-start">
+                <span class="mr-3 text-gray-400">•</span>
+                <span>linkable at the level of specific sections or passages,</span>
+            </li>
+            <li class="flex items-start">
+                <span class="mr-3 text-gray-400">•</span>
+                <span>easy to browse, search, and reference.</span>
+            </li>
+        </ul>
+        
+        <p class="text-lg text-gray-700 leading-relaxed">
+            Instead of dead-end PDFs and maze-like government websites, reports become something you can actually navigate, cite, and share.
+        </p>
+    </section>
+    
+    <hr class="max-w-4xl mx-auto border-gray-200">
+    
+    <!-- Section 3: Concrete Examples -->
+    <section class="max-w-4xl mx-auto px-6 py-16 md:py-24">
+        <h2 class="text-3xl md:text-4xl font-light text-gray-900 mb-6">
+            Why this is broken today
+        </h2>
+        <h3 class="text-2xl md:text-3xl font-light text-gray-600 mb-12">
+            (two concrete examples)
+        </h3>
+        
+        <p class="text-lg text-gray-700 mb-16 leading-relaxed">
+            The problem is not abstract. It is structural and repeatable.
+        </p>
+        
+        <p class="text-lg text-gray-700 mb-12 leading-relaxed">
+            Below are two representative cases, adapted directly from real government publications.
+        </p>
+        
+        <!-- Example 1: US Senate -->
+        <div class="mb-20">
+            <h3 class="text-2xl md:text-3xl font-medium text-gray-900 mb-6">
+                Example 1: US Senate investigation into the financial crisis
+            </h3>
+            
+            <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                This report is one of the primary sources behind major journalism on the 2008 financial crisis — including revelations about subprime mortgage packaging and ratings-agency failures.
+            </p>
+            
+            <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                Yet accessing it is surprisingly difficult.
+            </p>
+            
+            <p class="text-lg font-medium text-gray-900 mb-6">
+                What actually happens today:
+            </p>
+            
+            <ul class="space-y-8 mb-8">
+                <li class="text-gray-700">
+                    <p class="mb-4 leading-relaxed">
+                        You must first locate the correct Senate subcommittee website (not easy).
+                    </p>
+                    <figure class="bg-gray-50 border border-gray-200 rounded p-4">
+                        <img src="assets/images/senate-screenshot-1.png" 
+                             alt="Senate subcommittee website showing difficult navigation" 
+                             class="w-full h-auto rounded shadow-sm">
+                        <figcaption class="text-sm text-gray-500 mt-3 italic">Screenshot from the Senate subcommittee website</figcaption>
+                    </figure>
+                </li>
+                
+                <li class="text-gray-700">
+                    <p class="mb-4 leading-relaxed">
+                        There is no simple search; you must know which Congress the report belongs to. The listing of reports itself is a PDF.
+                    </p>
+                    <figure class="bg-gray-50 border border-gray-200 rounded p-4">
+                        <img src="assets/images/senate-screenshot-2.png" 
+                             alt="PDF listing of reports" 
+                             class="w-full h-auto rounded shadow-sm">
+                        <figcaption class="text-sm text-gray-500 mt-3 italic">The report listing is itself a PDF</figcaption>
+                    </figure>
+                </li>
+                
+                <li class="text-gray-700">
+                    <p class="mb-4 leading-relaxed">
+                        That PDF contains links — some of which are broken or unreliable.
+                    </p>
+                    <figure class="bg-gray-50 border border-gray-200 rounded p-4">
+                        <img src="assets/images/senate-screenshot-3.png" 
+                             alt="Broken or unreliable links in PDF" 
+                             class="w-full h-auto rounded shadow-sm">
+                        <figcaption class="text-sm text-gray-500 mt-3 italic">Links within the PDF are often broken</figcaption>
+                    </figure>
+                </li>
+                
+                <li class="text-gray-700">
+                    <p class="mb-4 leading-relaxed">
+                        Eventually, you reach multiple PDFs, split across volumes, each close to 100MB.
+                    </p>
+                    <figure class="bg-gray-50 border border-gray-200 rounded p-4">
+                        <img src="assets/images/senate-screenshot-4.png" 
+                             alt="Multiple large PDF volumes" 
+                             class="w-full h-auto rounded shadow-sm">
+                        <figcaption class="text-sm text-gray-500 mt-3 italic">Reports split across multiple massive PDFs</figcaption>
+                    </figure>
+                </li>
+                
+                <li class="text-gray-700">
+                    <p class="mb-4 leading-relaxed">
+                        The text versions are often unusable or incomplete.
+                    </p>
+                    <figure class="bg-gray-50 border border-gray-200 rounded p-4">
+                        <img src="assets/images/senate-screenshot-5.png" 
+                             alt="Unusable text versions of reports" 
+                             class="w-full h-auto rounded shadow-sm">
+                        <figcaption class="text-sm text-gray-500 mt-3 italic">Text versions are incomplete or broken</figcaption>
+                    </figure>
+                </li>
+            </ul>
+            
+            <div class="bg-gray-50 border-l-4 border-gray-300 p-6 my-8">
+                <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                    At the end of this process, you may technically "have the report", but it is still:
+                </p>
+                <ul class="space-y-2 text-gray-700">
+                    <li class="flex items-start">
+                        <span class="mr-3 text-gray-400">•</span>
+                        <span>hundreds of pages long,</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mr-3 text-gray-400">•</span>
+                        <span>difficult to search,</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mr-3 text-gray-400">•</span>
+                        <span>impossible to link to precisely,</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mr-3 text-gray-400">•</span>
+                        <span>frustrating to use on anything other than a desktop.</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <p class="text-lg text-gray-700 leading-relaxed font-medium">
+                This is not a niche failure. It is typical.
+            </p>
+        </div>
+        
+        <!-- Example 2: Saville Inquiry -->
+        <div class="mb-12">
+            <h3 class="text-2xl md:text-3xl font-medium text-gray-900 mb-6">
+                Example 2: The Saville Inquiry (UK)
+            </h3>
+            
+            <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                The Saville Inquiry examined the killing of civilians on Bloody Sunday — a matter of profound historical and political importance.
+            </p>
+            
+            <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                At first glance, it looks better served.
+            </p>
+            
+            <figure class="bg-gray-50 border border-gray-200 rounded p-4 mb-8">
+                <img src="assets/images/saville-screenshot-1.png" 
+                     alt="Saville Inquiry bespoke website" 
+                     class="w-full h-auto rounded shadow-sm">
+                <figcaption class="text-sm text-gray-500 mt-3 italic">There is a bespoke website</figcaption>
+            </figure>
+            
+            <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                But once you try to use it:
+            </p>
+            
+            <ul class="space-y-8 mb-8">
+                <li class="text-gray-700">
+                    <p class="mb-4 leading-relaxed">
+                        The "reports and statements" page contains no real links. Page numbers are plain text, not navigable. Downloads are opaque and fragmented.
+                    </p>
+                    <figure class="bg-gray-50 border border-gray-200 rounded p-4">
+                        <img src="assets/images/saville-screenshot-2.png" 
+                             alt="No real links on reports page" 
+                             class="w-full h-auto rounded shadow-sm">
+                        <figcaption class="text-sm text-gray-500 mt-3 italic">Page numbers are plain text, not clickable links</figcaption>
+                    </figure>
+                </li>
+                
+                <li class="text-gray-700">
+                    <p class="mb-4 leading-relaxed">
+                        Alternative formats require emailing the National Archives.
+                    </p>
+                    <figure class="bg-gray-50 border border-gray-200 rounded p-4">
+                        <img src="assets/images/saville-screenshot-3.png" 
+                             alt="Email requirement for alternative formats" 
+                             class="w-full h-auto rounded shadow-sm">
+                        <figcaption class="text-sm text-gray-500 mt-3 italic">Must email for alternative formats</figcaption>
+                    </figure>
+                </li>
+            </ul>
+            
+            <p class="text-lg text-gray-700 leading-relaxed font-medium">
+                Again, the issue is not the absence of information, but the absence of usable access.
+            </p>
+        </div>
+    </section>
+    
+    <hr class="max-w-4xl mx-auto border-gray-200">
+    
+    <!-- Section 4: Systemic Framing -->
+    <section class="max-w-4xl mx-auto px-6 py-16 md:py-24">
+        <h2 class="text-3xl md:text-4xl font-light text-gray-900 mb-12">
+            This is a systemic problem
+        </h2>
+        
+        <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+            Across jurisdictions and decades, the pattern repeats:
+        </p>
+        
+        <ul class="space-y-3 text-lg text-gray-700 mb-12">
+            <li class="flex items-start">
+                <span class="mr-3 text-gray-400">•</span>
+                <span>Important reports exist.</span>
+            </li>
+            <li class="flex items-start">
+                <span class="mr-3 text-gray-400">•</span>
+                <span>They are published once.</span>
+            </li>
+            <li class="flex items-start">
+                <span class="mr-3 text-gray-400">•</span>
+                <span>They are poorly structured for the web.</span>
+            </li>
+            <li class="flex items-start">
+                <span class="mr-3 text-gray-400">•</span>
+                <span>Over time, links rot, formats decay, and discoverability collapses.</span>
+            </li>
+        </ul>
+        
+        <div class="bg-gray-50 border-l-4 border-gray-400 p-6 my-8">
+            <p class="text-xl text-gray-800 leading-relaxed">
+                The web excels at sharing, linking, and searching.<br>
+                These reports are published as if the web did not exist.
+            </p>
+        </div>
+    </section>
+    
+    <hr class="max-w-4xl mx-auto border-gray-200">
+    
+    <!-- Section 5: What Changes with Reports that Matter -->
+    <section class="max-w-4xl mx-auto px-6 py-16 md:py-24">
+        <h2 class="text-3xl md:text-4xl font-light text-gray-900 mb-12">
+            What Reports that Matter does differently
+        </h2>
+        
+        <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+            Reports that Matter applies a small set of simple principles:
+        </p>
+        
+        <ul class="space-y-3 text-lg text-gray-700 mb-12">
+            <li class="flex items-start">
+                <span class="mr-3 text-gray-400">•</span>
+                <span>Permanent storage using modern infrastructure.</span>
+            </li>
+            <li class="flex items-start">
+                <span class="mr-3 text-gray-400">•</span>
+                <span>Full-text extraction so reports are searchable.</span>
+            </li>
+            <li class="flex items-start">
+                <span class="mr-3 text-gray-400">•</span>
+                <span>Deep links directly into sections and paragraphs.</span>
+            </li>
+            <li class="flex items-start">
+                <span class="mr-3 text-gray-400">•</span>
+                <span>Clean, web-native presentation.</span>
+            </li>
+        </ul>
+        
+        <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+            In practice, this means:
+        </p>
+        
+        <ul class="space-y-3 text-lg text-gray-700">
+            <li class="flex items-start">
+                <span class="mr-3 text-gray-400">•</span>
+                <span>you can link to the exact passage that matters,</span>
+            </li>
+            <li class="flex items-start">
+                <span class="mr-3 text-gray-400">•</span>
+                <span>search engines can index the content properly,</span>
+            </li>
+            <li class="flex items-start">
+                <span class="mr-3 text-gray-400">•</span>
+                <span>readers can browse, skim, and explore without downloading massive files.</span>
+            </li>
+        </ul>
+    </section>
+    
+    <hr class="max-w-4xl mx-auto border-gray-200">
+    
+    <!-- Section 6: Why This Matters -->
+    <section class="max-w-4xl mx-auto px-6 py-16 md:py-24">
+        <h2 class="text-3xl md:text-4xl font-light text-gray-900 mb-12">
+            Why this matters
+        </h2>
+        
+        <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+            Official inquiry reports often contain the factual backbone of public understanding: evidence, timelines, testimony, and findings that shape how societies understand crises, failures, and institutional responsibility.
+        </p>
+        
+        <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+            When this material is inaccessible, public discourse becomes thinner, more second-hand, and less accountable.
+        </p>
+        
+        <p class="text-lg text-gray-700 leading-relaxed font-medium">
+            Making reports usable is a small but foundational step toward better-informed journalism, research, and civic debate.
+        </p>
+    </section>
+    
+    <hr class="max-w-4xl mx-auto border-gray-200">
+    
+    <!-- Section 7: Scope and Status -->
+    <section class="max-w-4xl mx-auto px-6 py-16 md:py-24">
+        <h2 class="text-3xl md:text-4xl font-light text-gray-900 mb-12">
+            Scope and focus
+        </h2>
+        
+        <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+            We focus initially on English-language reports from the UK and US, where inquiry reports are often exceptionally rich but remain poorly served by existing publication practices.
+        </p>
+        
+        <p class="text-lg text-gray-700 leading-relaxed">
+            Over time, the same approach can extend wherever serious public reports exist but remain locked away.
+        </p>
+        
+        <div class="mt-12 pt-8 border-t border-gray-200">
+            <h3 class="text-2xl font-light text-gray-900 mb-6">
+                A public-interest project
+            </h3>
+            
+            <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                Reports that Matter is an independent, public-interest initiative.
+            </p>
+            
+            <p class="text-lg text-gray-700 leading-relaxed">
+                Our aim is straightforward: to make important reports easy to find, easy to read, and easy to link to — so they can actually be used.
+            </p>
+        </div>
+    </section>
+    
+    <hr class="max-w-4xl mx-auto border-gray-200">
+    
+    <!-- Section 8: Light Engagement -->
+    <section class="max-w-4xl mx-auto px-6 py-16 md:py-24">
+        <div class="text-center max-w-2xl mx-auto">
+            <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                Interested in exploring what we've made available so far?
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+                <a href="#" class="inline-block px-6 py-3 text-base font-medium text-gray-700 bg-white border border-gray-300 rounded hover:bg-gray-50 transition-colors">
+                    Explore reports
+                </a>
+                <a href="#" class="inline-block px-6 py-3 text-base font-medium text-gray-700 bg-white border border-gray-300 rounded hover:bg-gray-50 transition-colors">
+                    Get updates
+                </a>
+            </div>
+            
+            <p class="text-sm text-gray-500">
+                No spam. Just occasional updates when new reports are surfaced.
+            </p>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-50 border-t border-gray-200 mt-16">
+        <div class="max-w-4xl mx-auto px-6 py-12">
+            <p class="text-sm text-gray-600 text-center">
+                Reports that Matter &copy; 2026
+            </p>
+        </div>
+    </footer>
+    
+</body>
+</html>

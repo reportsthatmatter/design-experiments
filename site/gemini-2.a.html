@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports that Matter (Concept 2: Brutalist)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #fff;
+            color: #000;
+        }
+        h1, h2, h3 {
+            font-weight: bold;
+        }
+        .container {
+            width: 95%;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .section {
+            border: 1px solid #000;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        a {
+            color: #0000ff;
+            text-decoration: underline;
+        }
+        a:hover {
+            background-color: #0000ff;
+            color: #fff;
+        }
+        .cta-button {
+            border: 1px solid #000;
+            padding: 0.75rem 1.5rem;
+            display: inline-block;
+            text-decoration: none;
+            color: #000;
+            background-color: #fff;
+        }
+        .cta-button:hover {
+            background-color: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="py-8">
+
+    <div class="container">
+        
+        <header class="section">
+            <h1 class="text-3xl">REPORTS THAT MATTER</h1>
+            <p class="text-sm">[PUBLIC-INTEREST-PROJECT]</p>
+        </header>
+
+        <div class="section">
+            <h2 class="text-2xl mb-4">&gt; THE PROBLEM</h2>
+            <p class="text-lg leading-relaxed">Important public reports exist. They are just hard to find, hard to use, and hard to link to.</p>
+            <p class="mt-4">Governments publish vast amounts of high-quality information on matters of real public importance: official inquiries, investigations, and reports produced with serious resources, expert authorship, and often subpoena powers.</p>
+            <p class="mt-4">Yet much of this material is effectively hidden. Scattered across obscure websites, locked in PDFs, poorly indexed, and impossible to link to at the level that matters: the specific finding, paragraph, or piece of evidence.</p>
+        </div>
+
+        <div class="section">
+            <h2 class="text-2xl mb-4">&gt; THE FIX</h2>
+            <p>Reports that Matter makes important public-interest reports usable on the web.</p>
+            <p class="mt-4">We make reports:</p>
+            <ul class="list-disc list-inside mt-2">
+                <li>DISCOVERABLE</li>
+                <li>READABLE</li>
+                <li>LINKABLE</li>
+                <li>SEARCHABLE</li>
+            </ul>
+            <p class="mt-4">No more dead-end PDFs. No more maze-like government sites. Just content you can navigate, cite, and share.</p>
+        </div>
+
+        <div class="section">
+            <h2 class="text-2xl mb-4">&gt; EVIDENCE_01: US SENATE FINANCE REPORT</h2>
+            <p class="mb-4">One of the primary sources on the 2008 financial crisis. Accessing it is a case study in failure.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <h3 class="text-lg mb-2">WHAT HAPPENS TODAY:</h3>
+                    <ol class="list-decimal list-inside text-sm space-y-1">
+                        <li>Locate correct Senate subcommittee site.</li>
+                        <li>Realize there is no search.</li>
+                        <li>Find the list of reports is a PDF.</li>
+                        <li>Discover links in that PDF are broken.</li>
+                        <li>Arrive at multiple 100MB+ PDFs.</li>
+                        <li>Find text versions are unusable.</li>
+                    </ol>
+                </div>
+                <div>
+                    <img src="./assets/images/senate-screenshot-1.png" alt="senate website" class="border border-black w-full">
+                    <p class="text-xs mt-1">[FIG.1A] Obscure subcommittee website.</p>
+                </div>
+            </div>
+             <img src="./assets/images/senate-screenshot-3.png" alt="broken links" class="border border-black w-full mt-4">
+             <p class="text-xs mt-1">[FIG.1B] Dead links inside a PDF directory.</p>
+        </div>
+        
+        <div class="section">
+            <h2 class="text-2xl mb-4">&gt; EVIDENCE_02: THE SAVILLE INQUIRY (UK)</h2>
+            <p class="mb-4">Examined the killing of civilians on Bloody Sunday. A bespoke website exists, but is functionally broken.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <h3 class="text-lg mb-2">WHAT HAPPENS TODAY:</h3>
+                    <ol class="list-decimal list-inside text-sm space-y-1">
+                        <li>"Reports" page has no links.</li>
+                        <li>Page numbers are plain text.</li>
+                        <li>Downloads are opaque + fragmented.</li>
+                        <li>Alternative formats: email someone.</li>
+                    </ol>
+                    <p class="mt-4">The issue is not absence of information, but absence of usable access.</p>
+                </div>
+                 <div>
+                    <img src="./assets/images/saville-screenshot-1.png" alt="saville inquiry website" class="border border-black w-full">
+                    <p class="text-xs mt-1">[FIG.2A] The bespoke website.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+             <h2 class="text-2xl mb-4">&gt; SYSTEMIC FAILURE</h2>
+             <p>The pattern repeats: publish once, structure poorly, allow decay. These reports are published as if the web did not exist.</p>
+        </div>
+
+        <div class="section">
+            <h2 class="text-2xl mb-4">&gt; PRINCIPLES</h2>
+             <ul class="list-disc list-inside">
+                <li>PERMANENT_STORAGE</li>
+                <li>FULL_TEXT_EXTRACTION</li>
+                <li>DEEP_LINKS</li>
+                <li>WEB_NATIVE_PRESENTATION</li>
+             </ul>
+        </div>
+        
+        <div class="section text-center">
+            <p>An independent, public-interest initiative to make important reports easy to find, read, and link to.</p>
+            <div class="mt-6">
+                <a href="#" class="cta-button">EXPLORE_REPORTS</a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

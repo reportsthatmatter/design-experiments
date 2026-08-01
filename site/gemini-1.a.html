@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports that Matter (Concept 1: The Markup)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Tinos:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Tinos', serif;
+            background-color: #fdfdfd;
+            color: #1a1a1a;
+        }
+        h1, h2, h3, .sans {
+            font-family: 'Inter', sans-serif;
+        }
+        .sidenote {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+            line-height: 1.4;
+            color: #555;
+        }
+        .main-content {
+            grid-column: 1 / span 8;
+        }
+        .margin-content {
+            grid-column: 9 / span 4;
+        }
+        @media (max-width: 1024px) {
+            .main-content {
+                grid-column: 1 / -1;
+            }
+            .margin-content {
+                grid-column: 1 / -1;
+                margin-top: 1rem;
+                padding-top: 1rem;
+                border-top: 1px solid #e5e5e5;
+            }
+        }
+        .report-screenshot {
+            border: 1px solid #e5e5e5;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body class="py-12">
+
+    <div class="container mx-auto px-4 max-w-6xl">
+        
+        <header class="text-center max-w-3xl mx-auto mb-24">
+            <h1 class="text-4xl md:text-5xl font-bold tracking-tighter mb-4">Important public reports exist.</h1>
+            <p class="text-xl md:text-2xl leading-relaxed text-slate-800">They are just hard to find, hard to use, and hard to link to.</p>
+        </header>
+
+        <main class="grid grid-cols-12 gap-x-8">
+            <div class="main-content">
+                <article class="prose prose-lg max-w-none">
+                    <p class="lead">Governments publish vast amounts of high-quality information on matters of real public importance: official inquiries, investigations, and reports produced with serious resources, expert authorship, and often subpoena powers.</p>
+                    
+                    <p>Yet much of this material is effectively hidden. It is scattered across obscure or broken websites, locked inside huge PDF files, poorly indexed by search engines, and almost impossible to link to at the level that actually matters — the specific finding, paragraph, or piece of evidence.</p>
+                    
+                    <p>Even when journalists or commentators refer to these reports, readers are rarely taken to the report itself, let alone the relevant section. The result is that some of the most careful public research ever produced is underused in public debate.</p>
+
+                    <hr class="my-16">
+
+                    <h2 class="font-bold text-3xl sans">Reports that Matter exists to fix this.</h2>
+                    <p>We collect, structure, and present serious reports so that they are:</p>
+                    <ul>
+                        <li><strong>Discoverable</strong> via search,</li>
+                        <li><strong>Readable</strong> online (not just downloadable PDFs),</li>
+                        <li><strong>Linkable</strong> at the level of specific sections or passages,</li>
+                        <li><strong>Easy</strong> to browse, search, and reference.</li>
+                    </ul>
+                    <p>Instead of dead-end PDFs and maze-like government websites, reports become something you can actually navigate, cite, and share.</p>
+
+                    <hr class="my-16">
+
+                    <h2 class="font-bold text-3xl sans">Why this is broken today</h2>
+                    <p class="lead">The problem is not abstract. It is structural and repeatable. Below are two representative cases, adapted directly from real government publications.</p>
+                    
+                    <div class="mt-12">
+                        <h3 class="font-bold text-2xl sans mb-2">Example 1: US Senate investigation into the financial crisis</h3>
+                        <p>This report is one of the primary sources behind major journalism on the 2008 financial crisis — including revelations about subprime mortgage packaging and ratings-agency failures. Yet accessing it is surprisingly difficult.</p>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="margin-content">
+                <!-- Empty for first section -->
+            </div>
+        </main>
+
+        <section class="grid grid-cols-12 gap-x-8 mt-8">
+            <div class="main-content">
+                 <img src="./assets/images/senate-screenshot-1.png" alt="Screenshot of a senate subcommittee website" class="report-screenshot">
+                 <img src="./assets/images/senate-screenshot-2.png" alt="Screenshot of a PDF listing reports" class="report-screenshot">
+                 <img src="./assets/images/senate-screenshot-3.png" alt="Screenshot of broken links in a PDF" class="report-screenshot">
+            </div>
+            <div class="margin-content">
+                <aside class="sidenote sticky top-8">
+                    <h4 class="font-bold sans mb-2">What actually happens today:</h4>
+                    <ol class="list-decimal list-inside space-y-3">
+                        <li>You must first locate the correct Senate subcommittee website (not easy).</li>
+                        <li>There is no simple search; you must know which Congress the report belongs to.</li>
+                        <li>The listing of reports itself is a PDF.</li>
+                        <li>That PDF contains links — some of which are broken or unreliable.</li>
+                        <li>Eventually, you reach multiple PDFs, split across volumes, each close to 100MB.</li>
+                        <li>The text versions are often unusable or incomplete.</li>
+                    </ol>
+                    <p class="mt-4 text-xs italic">Screenshots from the Official Inquiries deck.</p>
+                </aside>
+            </div>
+        </section>
+
+        <section class="grid grid-cols-12 gap-x-8 mt-8">
+             <div class="main-content">
+                <article class="prose prose-lg max-w-none">
+                     <p>At the end of this process, you may technically “have the report”, but it is still hundreds of pages long, difficult to search, impossible to link to precisely, and frustrating to use on anything other than a desktop. This is not a niche failure. It is typical.</p>
+
+                    <div class="mt-12">
+                        <h3 class="font-bold text-2xl sans mb-2">Example 2: The Saville Inquiry (UK)</h3>
+                        <p>The Saville Inquiry examined the killing of civilians on Bloody Sunday — a matter of profound historical and political importance. At first glance, it looks better served. There is a bespoke website.</p>
+                    </div>
+                    <img src="./assets/images/saville-screenshot-1.png" alt="Screenshot of the Saville Inquiry website" class="report-screenshot">
+                    <img src="./assets/images/saville-screenshot-2.png" alt="Screenshot of report page with no links" class="report-screenshot">
+                </article>
+            </div>
+            <div class="margin-content">
+                <aside class="sidenote sticky top-8">
+                     <h4 class="font-bold sans mb-2">But once you try to use it:</h4>
+                    <ol class="list-decimal list-inside space-y-3">
+                        <li>The “reports and statements” page contains no real links.</li>
+                        <li>Page numbers are plain text, not navigable.</li>
+                        <li>Downloads are opaque and fragmented.</li>
+                        <li>Alternative formats require emailing the National Archives.</li>
+                    </ol>
+                     <p class="mt-4">Again, the issue is not the absence of information, but the absence of usable access.</p>
+                </aside>
+            </div>
+        </section>
+
+        <footer class="max-w-3xl mx-auto mt-24 text-center text-slate-600">
+            <p class="sans font-semibold">Reports that Matter is an independent, public-interest initiative.</p>
+            <p class="mt-2">Our aim is to make important reports easy to find, easy to read, and easy to link to — so they can actually be used.</p>
+            <div class="mt-8">
+                <a href="#" class="sans bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700">Explore Reports</a>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports that Matter | The Case for Usable Public Information</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['Crimson Pro', 'serif'],
+                        display: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'paper': '#fdfcfb',
+                        'ink': '#1a1a1a',
+                        'archive': '#f5f2f0',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hanging-indent {
+            text-indent: -1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .serif-italic {
+            font-family: 'Crimson Pro', serif;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body class="bg-paper text-ink selection:bg-archive">
+
+    <!-- Header -->
+    <header class="py-12 border-b border-gray-100 px-6">
+        <div class="max-w-3xl mx-auto flex justify-between items-baseline">
+            <span class="font-sans text-xs uppercase tracking-widest font-semibold opacity-50">Public Record
+                Initiative</span>
+            <span class="font-sans text-xs uppercase tracking-widest font-semibold opacity-50">2026.01</span>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <main class="max-w-3xl mx-auto px-6 py-24 md:py-32">
+        <h1 class="font-display text-5xl md:text-7xl leading-tight mb-16 italic font-light">
+            The knowledge is there.<br>
+            <span class="not-italic font-normal">It is just inaccessible.</span>
+        </h1>
+
+        <div class="font-serif text-xl md:text-2xl leading-relaxed space-y-12 font-light">
+            <p>
+                Governments publish vast amounts of high-quality information: official inquiries, investigations, and
+                reports produced with serious resources, expert authorship, and subpoena powers.
+            </p>
+            <p class="font-medium">
+                Yet much of this material is effectively hidden in plain sight.
+            </p>
+            <p>
+                Scattered across broken websites, locked inside gargantuan PDFs, and poorly indexed by search engines,
+                these reports are almost impossible to reference at the level that actually matters: the specific
+                finding, the paragraph, the evidence.
+            </p>
+            <p class="text-gray-500 italic pb-12">
+                "We treat our most important public records as if the web did not exist."
+            </p>
+        </div>
+
+        <div class="border-t border-ink pt-20 mb-32">
+            <h2 class="font-display text-3xl mb-12">Reports that Matter makes the public record <span
+                    class="italic">web-native</span>.</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 font-sans text-sm tracking-wide uppercase">
+                <div class="space-y-4">
+                    <div class="font-bold opacity-30 text-4xl">01.</div>
+                    <div class="font-semibold">Discoverable</div>
+                    <p class="normal-case text-gray-600 font-serif text-base leading-relaxed tracking-normal italic">
+                        Full-text extraction so reports are finally searchable by the public.</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="font-bold opacity-30 text-4xl">02.</div>
+                    <div class="font-semibold">Readable</div>
+                    <p class="normal-case text-gray-600 font-serif text-base leading-relaxed tracking-normal italic">No
+                        more downloading 100MB PDF files. Read directly in the browser.</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="font-bold opacity-30 text-4xl">03.</div>
+                    <div class="font-semibold">Linkable</div>
+                    <p class="normal-case text-gray-600 font-serif text-base leading-relaxed tracking-normal italic">
+                        Cite specific paragraphs. Share the exact piece of evidence.</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="font-bold opacity-30 text-4xl">04.</div>
+                    <div class="font-semibold">Permanent</div>
+                    <p class="normal-case text-gray-600 font-serif text-base leading-relaxed tracking-normal italic">
+                        Fighting link-rot with stable, modern infrastructure.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Case Studies -->
+        <section class="mb-48">
+            <h3 class="font-sans text-xs uppercase tracking-[0.2em] font-bold text-gray-400 mb-12">A Demonstration of
+                Failure</h3>
+
+            <div class="space-y-32">
+                <!-- Case 1 -->
+                <div>
+                    <h4 class="font-display text-2xl mb-8">Case I: The US Senate Financial Crisis Report</h4>
+                    <p class="font-serif text-lg leading-relaxed mb-12">A primary source for modern history, buried
+                        under archaic navigation. To find a specific revelation, a researcher must navigate a maze of
+                        broken links and massive, fragmented files.</p>
+
+                    <div class="space-y-8 bg-archive p-8 md:-mx-12 overflow-hidden rounded-sm">
+                        <figure class="bg-white p-4 shadow-sm">
+                            <img src="assets/images/senate-screenshot-1.png"
+                                class="w-full opacity-90 hover:opacity-100 transition-opacity">
+                            <figcaption
+                                class="mt-4 font-sans text-[10px] uppercase tracking-wider text-gray-500 border-t pt-4">
+                                Evidence 1.1: Web interface requires knowledge of historical Congressional sessions.
+                            </figcaption>
+                        </figure>
+                        <figure class="bg-white p-4 shadow-sm">
+                            <img src="assets/images/senate-screenshot-4.png"
+                                class="w-full opacity-90 hover:opacity-100 transition-opacity">
+                            <figcaption
+                                class="mt-4 font-sans text-[10px] uppercase tracking-wider text-gray-500 border-t pt-4">
+                                Evidence 1.2: Content split across multiple 100MB volumes.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <!-- Case 2 -->
+                <div>
+                    <h4 class="font-display text-2xl mb-8">Case II: The Saville Inquiry (UK)</h4>
+                    <p class="font-serif text-lg leading-relaxed mb-12">An inquiry of profound political importance.
+                        While a bespoke site exists, many page references remain plain text and alternative formats
+                        require direct correspondence with Archives.</p>
+
+                    <div class="space-y-8 bg-archive p-8 md:-mx-12 overflow-hidden rounded-sm">
+                        <figure class="bg-white p-4 shadow-sm">
+                            <img src="assets/images/saville-screenshot-2.png"
+                                class="w-full opacity-90 hover:opacity-100 transition-opacity">
+                            <figcaption
+                                class="mt-4 font-sans text-[10px] uppercase tracking-wider text-gray-500 border-t pt-4">
+                                Evidence 2.1: Navigation menus without links; plain-text page references.</figcaption>
+                        </figure>
+                        <figure class="bg-white p-4 shadow-sm">
+                            <img src="assets/images/saville-screenshot-3.png"
+                                class="w-full opacity-90 hover:opacity-100 transition-opacity">
+                            <figcaption
+                                class="mt-4 font-sans text-[10px] uppercase tracking-wider text-gray-500 border-t pt-4">
+                                Evidence 2.2: The "Archival Wall"—email required for basic digital access.</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Vision -->
+        <section class="py-24 border-t-2 border-ink text-center">
+            <h2 class="font-display text-4xl mb-8">A public-interest infrastructure.</h2>
+            <p class="font-serif text-xl leading-relaxed mb-16 max-w-xl mx-auto">
+                Reports that Matter is an independent initiative to ensure that the facts which shape our society are
+                searchable, stable, and truly open.
+            </p>
+
+            <div class="flex flex-col md:flex-row gap-6 justify-center font-sans tracking-widest text-xs font-bold">
+                <a href="#"
+                    class="px-10 py-4 bg-ink text-white rounded-full hover:bg-gray-800 transition-colors uppercase">Explore
+                    the Reports</a>
+                <a href="#"
+                    class="px-10 py-4 border border-ink text-ink rounded-full hover:bg-ink hover:text-white transition-all uppercase">Support
+                    the Project</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-20 bg-ink text-white/50 font-sans text-[10px] uppercase tracking-[0.3em] text-center">
+        <div class="max-w-3xl mx-auto px-6">
+            <p>&copy; 2026 Reports that Matter. Built for clarity and the public good.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

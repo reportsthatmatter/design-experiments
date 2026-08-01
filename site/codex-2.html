@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reports that Matter - Civic Tech Modern</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #0d1418;
+      --muted: #4b5962;
+      --bg: #f4f7f3;
+      --accent: #0b6a6c;
+      --accent-2: #f2b93b;
+      --card: #ffffff;
+      --line: #dce6e3;
+      --shadow: rgba(15, 30, 35, 0.12);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "DM Sans", "Helvetica", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 15% 0%, rgba(11, 106, 108, 0.08) 0%, transparent 42%),
+        radial-gradient(circle at 85% 10%, rgba(242, 185, 59, 0.12) 0%, transparent 40%),
+        var(--bg);
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 6vw;
+    }
+    .logo {
+      font-family: "Space Grotesk", "Helvetica", sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--muted);
+      font-weight: 500;
+      margin-left: 18px;
+      font-size: 0.95rem;
+    }
+    .hero {
+      padding: 60px 6vw 40px;
+      display: grid;
+      gap: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      align-items: center;
+    }
+    .hero h1 {
+      font-family: "Space Grotesk", "Helvetica", sans-serif;
+      font-size: clamp(2.4rem, 4vw, 4.4rem);
+      margin: 0;
+      line-height: 1;
+    }
+    .hero p {
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 520px;
+    }
+    .hero .cta {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+    .button {
+      padding: 12px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--ink);
+      text-decoration: none;
+      color: var(--ink);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .button.primary {
+      background: var(--ink);
+      color: var(--bg);
+    }
+    .metrics {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+      font-family: "Space Grotesk", "Helvetica", sans-serif;
+    }
+    .metrics div {
+      background: var(--card);
+      border: 1px solid var(--line);
+      padding: 14px 16px;
+      border-radius: 16px;
+      box-shadow: 0 16px 40px var(--shadow);
+      min-width: 140px;
+    }
+    section {
+      padding: 70px 6vw;
+      border-top: 1px solid var(--line);
+    }
+    h2 {
+      font-family: "Space Grotesk", "Helvetica", sans-serif;
+      font-size: clamp(1.8rem, 2.6vw, 2.8rem);
+      margin: 0 0 16px;
+    }
+    .subhead {
+      color: var(--muted);
+      max-width: 680px;
+    }
+    .grid {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      margin-top: 28px;
+    }
+    .card {
+      background: var(--card);
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      padding: 20px;
+      box-shadow: 0 18px 40px var(--shadow);
+    }
+    .card h3 {
+      font-family: "Space Grotesk", "Helvetica", sans-serif;
+      margin-top: 0;
+    }
+    .stack {
+      display: grid;
+      gap: 18px;
+      margin-top: 24px;
+    }
+    .stack img {
+      width: 100%;
+      display: block;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 600;
+      color: var(--accent);
+      text-transform: uppercase;
+      font-size: 0.7rem;
+      letter-spacing: 1px;
+    }
+    .line {
+      height: 1px;
+      background: var(--line);
+      margin: 24px 0;
+    }
+    .principles {
+      display: grid;
+      gap: 18px;
+    }
+    .principle {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      background: var(--card);
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      padding: 18px;
+    }
+    .badge {
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      background: rgba(11, 106, 108, 0.1);
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    footer {
+      padding: 60px 6vw 100px;
+      color: var(--muted);
+    }
+    .reveal {
+      animation: rise 0.8s ease-out both;
+    }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Reports that Matter</div>
+    <nav>
+      <a href="#proof">Evidence</a>
+      <a href="#solution">Solution</a>
+      <a href="#why">Why it matters</a>
+      <a href="#scope">Scope</a>
+    </nav>
+  </header>
+
+  <section class="hero reveal">
+    <div>
+      <div class="pill">Public-interest access</div>
+      <h1>Make public reports usable on the web.</h1>
+      <p>Important reports exist, but they are hidden in broken sites and PDFs. Reports that Matter rebuilds them for discovery, navigation, and citation.</p>
+      <div class="cta">
+        <a class="button primary" href="#">Explore reports</a>
+        <a class="button" href="#">Get updates</a>
+      </div>
+    </div>
+    <div>
+      <div class="metrics">
+        <div>
+          <div style="font-size: 1.4rem; font-weight: 700;">Discoverable</div>
+          <div style="color: var(--muted); font-size: 0.9rem;">Searchable, indexable</div>
+        </div>
+        <div>
+          <div style="font-size: 1.4rem; font-weight: 700;">Linkable</div>
+          <div style="color: var(--muted); font-size: 0.9rem;">Deep links by passage</div>
+        </div>
+        <div>
+          <div style="font-size: 1.4rem; font-weight: 700;">Permanent</div>
+          <div style="color: var(--muted); font-size: 0.9rem;">Stable, web-native</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="proof">
+    <h2>Two examples. Same failure pattern.</h2>
+    <p class="subhead">The problem is not abstract. These are real, high-impact reports, and they are still hard to find, hard to search, and hard to cite.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>US Senate financial crisis report</h3>
+        <p>Behind major journalism on 2008 lies a trail of broken links, PDF lists, and dead-end committee pages.</p>
+        <div class="stack">
+          <img src="assets/images/senate-screenshot-1.png" alt="Senate subcommittee reports" />
+          <img src="assets/images/senate-screenshot-4.png" alt="PDF listing" />
+        </div>
+      </div>
+      <div class="card">
+        <h3>Saville Inquiry (UK)</h3>
+        <p>A bespoke website exists, but reports and statements are text-only, fragmented, and difficult to use.</p>
+        <div class="stack">
+          <img src="assets/images/saville-screenshot-1.png" alt="Saville Inquiry" />
+          <img src="assets/images/saville-screenshot-3.png" alt="Saville Inquiry download" />
+        </div>
+      </div>
+    </div>
+    <div class="line"></div>
+    <p class="subhead">Across jurisdictions and decades, the pattern repeats: important reports exist, then decay into dead links and unusable formats.</p>
+  </section>
+
+  <section id="solution">
+    <h2>Simple principles, serious impact.</h2>
+    <div class="principles">
+      <div class="principle">
+        <div class="badge">01</div>
+        <div>
+          <strong>Deep links</strong>
+          <p>Direct readers to the exact passage that matters.</p>
+        </div>
+      </div>
+      <div class="principle">
+        <div class="badge">02</div>
+        <div>
+          <strong>Full text</strong>
+          <p>Search engines index the content properly.</p>
+        </div>
+      </div>
+      <div class="principle">
+        <div class="badge">03</div>
+        <div>
+          <strong>Permanence</strong>
+          <p>Modern hosting and preservation prevent link rot.</p>
+        </div>
+      </div>
+      <div class="principle">
+        <div class="badge">04</div>
+        <div>
+          <strong>Web-native access</strong>
+          <p>Readable without giant PDF downloads.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="why">
+    <h2>Why this matters</h2>
+    <p class="subhead">Official inquiry reports hold evidence, testimony, and findings that shape public understanding. When that material is inaccessible, public discourse becomes thinner and less accountable.</p>
+  </section>
+
+  <section id="scope">
+    <h2>Scope and status</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>UK + US focus</h3>
+        <p>English-language inquiry reports are exceptionally rich but poorly served by existing publication practices.</p>
+      </div>
+      <div class="card">
+        <h3>Independent public-interest project</h3>
+        <p>This is not a startup pitch. It is a practical attempt to make essential reports usable.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="cta">
+      <a class="button primary" href="#">Explore reports</a>
+      <a class="button" href="#">Get updates</a>
+    </div>
+  </footer>
+</body>
+</html>

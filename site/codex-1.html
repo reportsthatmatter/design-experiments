@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reports that Matter - Documentary Minimal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,300;7..72,400;7..72,600;7..72,700&family=Libre+Franklin:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #1b1b16;
+      --muted: #6d675a;
+      --paper: #f5f1e8;
+      --paper-deep: #efe9db;
+      --accent: #1f4e5f;
+      --line: #d8d1c2;
+      --shadow: rgba(27, 27, 22, 0.08);
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: "Literata", "Times New Roman", serif;
+      color: var(--ink);
+      background: radial-gradient(circle at top left, #fffaf2 0%, var(--paper) 40%, var(--paper-deep) 100%);
+      letter-spacing: 0.1px;
+    }
+    .grain {
+      position: fixed;
+      inset: 0;
+      background-image: repeating-linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.02) 0px,
+          rgba(0, 0, 0, 0.02) 1px,
+          transparent 1px,
+          transparent 2px
+        ),
+        repeating-linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0.015) 0px,
+          rgba(0, 0, 0, 0.015) 1px,
+          transparent 1px,
+          transparent 3px
+        );
+      pointer-events: none;
+      opacity: 0.4;
+      mix-blend-mode: multiply;
+    }
+    header {
+      padding: 24px 8vw 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      background: rgba(245, 241, 232, 0.9);
+      backdrop-filter: blur(4px);
+      z-index: 10;
+    }
+    .brand {
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    nav a {
+      font-family: "Libre Franklin", "Helvetica", sans-serif;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 16px;
+    }
+    main {
+      padding: 0 8vw 120px;
+    }
+    .hero {
+      padding: 70px 0 40px;
+      border-bottom: 1px solid var(--line);
+      display: grid;
+      gap: 24px;
+    }
+    .hero h1 {
+      font-size: clamp(2.4rem, 3.6vw, 4rem);
+      margin: 0;
+      line-height: 1.05;
+    }
+    .hero p {
+      max-width: 640px;
+      font-size: 1.05rem;
+      color: var(--muted);
+    }
+    .pull {
+      border-left: 3px solid var(--accent);
+      padding-left: 16px;
+      font-style: italic;
+      color: var(--ink);
+      max-width: 620px;
+    }
+    section {
+      padding: 60px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .section-title {
+      font-family: "Libre Franklin", "Helvetica", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+    h2 {
+      margin: 0 0 16px;
+      font-size: clamp(1.6rem, 2.4vw, 2.6rem);
+    }
+    .lede {
+      max-width: 700px;
+      font-size: 1.05rem;
+      color: var(--muted);
+    }
+    .two-col {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      align-items: start;
+    }
+    .callout {
+      background: #faf6ee;
+      border: 1px solid var(--line);
+      padding: 18px;
+      box-shadow: 0 10px 30px var(--shadow);
+    }
+    .callout ul {
+      margin: 12px 0 0 18px;
+      color: var(--muted);
+    }
+    .gallery {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    .gallery figure {
+      margin: 0;
+      background: #fdfbf7;
+      border: 1px solid var(--line);
+      padding: 12px;
+      box-shadow: 0 12px 24px var(--shadow);
+    }
+    .gallery img {
+      width: 100%;
+      display: block;
+    }
+    .caption {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+    .principles {
+      display: grid;
+      gap: 16px;
+    }
+    .principle {
+      border-top: 1px solid var(--line);
+      padding-top: 16px;
+      display: flex;
+      gap: 16px;
+      align-items: baseline;
+    }
+    .principle strong {
+      font-size: 1.1rem;
+      color: var(--accent);
+      min-width: 140px;
+    }
+    .cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .cta a {
+      text-decoration: none;
+      border: 1px solid var(--ink);
+      color: var(--ink);
+      padding: 10px 18px;
+      font-family: "Libre Franklin", "Helvetica", sans-serif;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .cta a.primary {
+      background: var(--ink);
+      color: var(--paper);
+    }
+    footer {
+      padding-top: 40px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .fade-in {
+      animation: fadeIn 0.9s ease-out both;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header>
+    <div class="brand">Reports that Matter</div>
+    <nav>
+      <a href="#problem">Problem</a>
+      <a href="#examples">Evidence</a>
+      <a href="#solution">Solution</a>
+      <a href="#scope">Scope</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero fade-in" id="problem">
+      <h1>Important public reports exist. They are unusable on the web.</h1>
+      <p>Official inquiries, investigations, and public reports carry some of the most rigorous evidence in public life. But the material is scattered, buried in PDFs, and almost impossible to link to at the level that matters.</p>
+      <p class="pull">Reports that Matter makes those reports discoverable, readable, and linkable — without turning them into a marketing product.</p>
+    </section>
+
+    <section>
+      <div class="section-title">What we do</div>
+      <h2>Make serious reports usable, not just accessible.</h2>
+      <div class="two-col">
+        <p class="lede">We collect, structure, and present public-interest reports so they can be searched, navigated, and cited. A reader should be able to reach the exact section referenced in a story, not a 700-page download.</p>
+        <div class="callout">
+          <strong>Reports become:</strong>
+          <ul>
+            <li>discoverable via search</li>
+            <li>readable in the browser</li>
+            <li>linkable to specific passages</li>
+            <li>stable over time</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="examples">
+      <div class="section-title">Concrete examples</div>
+      <h2>Evidence of a repeatable failure.</h2>
+      <p class="lede">These are real government publications. The problem is not the absence of information, but the absence of usable access.</p>
+      <div class="two-col" style="margin-top: 30px;">
+        <div>
+          <h3>US Senate financial crisis investigation</h3>
+          <p>The report behind much of the public understanding of 2008 is buried behind broken links, PDFs, and obscure committee pages. Even finding the right subcommittee site is a challenge.</p>
+          <div class="gallery">
+            <figure>
+              <img src="assets/images/senate-screenshot-1.png" alt="Senate report listing" />
+              <div class="caption">No clear search, no obvious path to the report.</div>
+            </figure>
+            <figure>
+              <img src="assets/images/senate-screenshot-3.png" alt="PDF report list" />
+              <div class="caption">Listings are PDFs with unreliable links.</div>
+            </figure>
+          </div>
+        </div>
+        <div>
+          <h3>Saville Inquiry (UK)</h3>
+          <p>A bespoke site exists, but the reports and statements page is unusable: plain text page numbers, fragmented downloads, and requests for alternative formats by email.</p>
+          <div class="gallery">
+            <figure>
+              <img src="assets/images/saville-screenshot-1.png" alt="Saville Inquiry site" />
+              <div class="caption">A site exists, but navigation is brittle.</div>
+            </figure>
+            <figure>
+              <img src="assets/images/saville-screenshot-2.png" alt="Saville Inquiry reports" />
+              <div class="caption">Downloads are opaque and fragmented.</div>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Systemic framing</div>
+      <h2>The pattern repeats across jurisdictions.</h2>
+      <p class="lede">Important reports are published once, poorly structured for the web, and then slowly decay. Links rot. Formats become unusable. Discoverability collapses.</p>
+    </section>
+
+    <section id="solution">
+      <div class="section-title">What changes</div>
+      <h2>A small set of principles fixes the failure.</h2>
+      <div class="principles">
+        <div class="principle">
+          <strong>Deep links</strong>
+          <span>Direct readers to the exact passage that matters.</span>
+        </div>
+        <div class="principle">
+          <strong>Full text</strong>
+          <span>Search engines can index the content properly.</span>
+        </div>
+        <div class="principle">
+          <strong>Permanence</strong>
+          <span>Stable, web-native hosting avoids link rot.</span>
+        </div>
+        <div class="principle">
+          <strong>Access</strong>
+          <span>Readable in the browser without massive downloads.</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Why this matters</div>
+      <h2>Public-interest reporting needs public-interest access.</h2>
+      <p class="lede">Official inquiries often contain the factual backbone of public understanding: evidence, timelines, testimony, and findings. When this material is inaccessible, public discourse becomes thinner and less accountable.</p>
+    </section>
+
+    <section id="scope">
+      <div class="section-title">Scope and status</div>
+      <div class="two-col">
+        <div>
+          <h2>UK and US focus, public-interest mandate.</h2>
+          <p class="lede">We focus on English-language reports in the UK and US, where inquiry reports are exceptionally rich but poorly served by existing publication practices.</p>
+        </div>
+        <div class="callout">
+          <strong>Independent project</strong>
+          <p class="lede">Not a commercial pitch. This is a practical attempt to make important reports usable.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">Light engagement</div>
+      <h2>Explore or stay in the loop.</h2>
+      <div class="cta">
+        <a class="primary" href="#">Explore reports</a>
+        <a href="#">Get updates</a>
+      </div>
+    </section>
+
+    <footer>
+      Reports that Matter is a public-interest initiative focused on long-term accessibility.
+    </footer>
+  </main>
+</body>
+</html>

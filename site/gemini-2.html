@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports that Matter (Concept 2: Refined Minimalism)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'IBM Plex Mono', monospace;
+            background-color: #fff;
+            color: #000;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .container {
+            max-width: 900px;
+        }
+        .section {
+            border: 1px solid #000;
+            padding: 2.5rem;
+            margin-bottom: -1px; /* Collapse borders */
+        }
+        .section-header {
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+        }
+        .hero-text {
+            font-size: 2.5rem;
+            font-weight: 600;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+        p {
+            line-height: 1.6;
+        }
+        a.text-link {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            transition: background-color 0.2s, color 0.2s;
+        }
+        a.text-link:hover {
+            background-color: #000;
+            color: #fff;
+            text-decoration: none;
+        }
+        .cta-button {
+            border: 1px solid #000;
+            padding: 1rem 2rem;
+            display: inline-block;
+            text-decoration: none;
+            color: #000;
+            background-color: #fff;
+            transition: background-color 0.2s, color 0.2s;
+            letter-spacing: 0.05em;
+            font-weight: 600;
+        }
+        .cta-button:hover {
+            background-color: #000;
+            color: #fff;
+        }
+        .image-caption {
+            font-size: 0.75rem;
+            margin-top: 0.75rem;
+            color: #555;
+            letter-spacing: 0.02em;
+        }
+        @media (min-width: 768px) {
+            .section {
+                padding: 4rem;
+            }
+        }
+    </style>
+</head>
+<body class="py-10 md:py-20">
+
+    <div class="container mx-auto px-4">
+        
+        <header class="section text-center">
+            <h1 class="text-xl tracking-widest font-semibold mb-8">REPORTS THAT MATTER</h1>
+            <p class="hero-text">Important public reports exist. They are just hard to find, use, and link to.</p>
+        </header>
+
+        <main>
+            <div class="section">
+                <h2 class="section-header">// THE PROBLEM</h2>
+                <p>Governments publish vast amounts of high-quality information on matters of real public importance: official inquiries, investigations, and reports produced with serious resources, expert authorship, and often subpoena powers.</p>
+                <br>
+                <p>Yet much of this material is effectively hidden. Scattered across obscure websites, locked in PDFs, poorly indexed, and impossible to link to at the level that matters: the specific finding, paragraph, or piece of evidence.</p>
+            </div>
+
+            <div class="section">
+                <h2 class="section-header">// THE FIX</h2>
+                <p>Reports that Matter makes public-interest reports usable on the web. We make them:</p>
+                <ul class="list-disc list-inside mt-4 space-y-2">
+                    <li>DISCOVERABLE</li>
+                    <li>READABLE</li>
+                    <li>LINKABLE</li>
+                    <li>SEARCHABLE</li>
+                </ul>
+                <br>
+                <p>No more dead-end PDFs. No more maze-like government sites. Just content you can <a href="#" class="text-link">navigate, cite, and share</a>.</p>
+            </div>
+
+            <div class="section">
+                <h2 class="section-header">// EVIDENCE_01: US SENATE FINANCE REPORT</h2>
+                <p class="mb-8">A primary source on the 2008 financial crisis. Accessing it is a case study in structural failure.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="font-semibold mb-3">FAILURE ANALYSIS:</h3>
+                        <ol class="list-decimal list-inside text-sm space-y-2">
+                            <li>Locate correct Senate subcommittee site.</li>
+                            <li>Realize there is no search function.</li>
+                            <li>Find the list of reports is a PDF.</li>
+                            <li>Discover links in that PDF are broken.</li>
+                            <li>Arrive at multiple 100MB+ PDFs.</li>
+                            <li>Find text versions are unusable.</li>
+                        </ol>
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <img src="./assets/images/senate-screenshot-1.png" alt="senate website" class="w-full">
+                        <p class="image-caption">[FIG.1A] Obscure subcommittee website.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-header">// EVIDENCE_02: THE SAVILLE INQUIRY (UK)</h2>
+                <p class="mb-8">Examined the killing of civilians on Bloody Sunday. Its bespoke website is functionally broken.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                     <div>
+                        <h3 class="font-semibold mb-3">FAILURE ANALYSIS:</h3>
+                        <ol class="list-decimal list-inside text-sm space-y-2">
+                            <li>"Reports" page contains no real links.</li>
+                            <li>Page numbers are plain text, not navigable.</li>
+                            <li>Downloads are opaque and fragmented.</li>
+                            <li>Alternative formats require emailing someone.</li>
+                        </ol>
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <img src="./assets/images/saville-screenshot-1.png" alt="saville inquiry website" class="w-full">
+                        <p class="image-caption">[FIG.2A] The bespoke, yet unusable, website.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-header">// CONCLUSION</h2>
+                 <p>The pattern repeats: publish once, structure poorly, allow decay. These reports are published as if the web did not exist. Making them usable is a small but foundational step toward a better-informed public discourse.</p>
+            </div>
+            
+            <div class="section text-center">
+                <p class="mb-6">An independent, public-interest project.</p>
+                <a href="#" class="cta-button">EXPLORE REPORTS</a>
+            </div>
+        </main>
+
+    </div>
+
+</body>
+</html>
